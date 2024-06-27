@@ -22,21 +22,21 @@ const Home = loadable(() => import('./pages/home'), {fallback})
 const MyNewRoute = loadable(() => import('./pages/my-new-route'))
 
 const routes = [
-    {
-        path: '/',
-        component: Home,
-        exact: true
-    },
-    {
-        path: '/my-new-route',
-        component: MyNewRoute
-    },
-    ..._routes
+  {
+    path: '/',
+    component: Home,
+    exact: true
+  },
+  {
+    path: '/my-new-route',
+    component: MyNewRoute
+  },
+  ..._routes
 ]
 
 export default () => {
-    const config = getConfig()
-    return configureRoutes(routes, config, {
-        ignoredRoutes: ['/callback', '*']
-    })
+  const config = getConfig()
+  return configureRoutes(routes, config, {
+    ignoredRoutes: ['/callback', '*']
+  })
 }

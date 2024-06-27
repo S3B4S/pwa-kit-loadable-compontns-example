@@ -7,6 +7,8 @@
 
 import React from 'react'
 
+import 'lodash'
+
 const MyNewRoute = () => {
     return <h1 style={{textAlign: 'center', fontSize: '4rem'}}>hello new route!</h1>
 }
